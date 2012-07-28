@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customizing Appearance</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/kendo.mobile.min.js"></script>
+    <script src="../../content/shared/js/console.js"></script>
+    <link href="../../../styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="../../../styles/kendo.mobile.all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="../index.html">Back</a>
+    <div data-role="view" data-title="Button Appearance" class="buttonAppearance">
+    <ul data-role="listview" data-type="group" data-style="inset">
+        <li>
+            Background color:
+            <ul>
+                <li>
+                    <i></i> <a data-role="button" style="background-color: green">Green</a>
+                </li>
+                <li>
+                    <i></i> <a data-role="button" style="background-color: darkred">Red</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            Font Size:
+            <ul>
+                <li>
+                    <i></i> <a data-role="button" style="font-size: 0.6em">Small</a>
+                </li>
+                <li>
+                    <i></i> <a data-role="button">Normal</a>
+                </li>
+                <li>
+                    <i></i> <a data-role="button" style="font-size: 1.2em">Large</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            Button icons (check help for the all icons):
+            <ul>
+                <li>
+                    <i></i> <a data-role="button" data-icon="featured">Featured</a>
+                </li>
+                <li>
+                    <i></i> <a data-role="button" data-icon="toprated">Top Rated</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <style scoped>
+        .buttonAppearance .km-button:not(.km-back)
+        {
+            width: 90%;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+    </style>
+</div>
+
+
+    <script>
+        window.kendoMobileApplication = new kendo.mobile.Application(document.body);
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic usage</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/kendo.mobile.min.js"></script>
+    <script src="../../content/shared/js/console.js"></script>
+    <link href="../../../styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="../../../styles/kendo.mobile.all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="../index.html">Back</a>
+    <div data-role="view" id="modalview-camera" data-title="HTML5 Camera">
+    <img src="../../content/mobile/modalview/lens.png" class="camera-image" /><br />
+    <a data-role="button" data-rel="modalview" href="#modalview-login" id="modalview-open-button">Login</a>
+
+    <div data-role="modalview" id="modalview-login" style="width: 95%; height: 80%;">
+        <div data-role="header">
+            <div data-role="navbar">
+                <span>Login</span>
+                <a data-click="closeModalViewLogin" data-role="button" data-align="right">Cancel</a>
+            </div>
+        </div>
+
+        <ul data-role="listview" data-style="inset">
+            <li><label for="username">Username:</label> <input type="text" id="username" /></li>
+            <li><label for="password">Password:</label> <input type="password" id="password" /></li>
+        </ul>
+        <a data-click="closeModalViewLogin" id="modalview-login-button" type="button" data-role="button">Login</a>
+        <a data-click="closeModalViewLogin" id="modalview-reg-button" type="button" data-role="button">Register</a>
+    </div>
+</div>
+
+<style scoped>
+    #modalview-login-button,
+    #modalview-reg-button,
+    #modalview-open-button {
+        display: block;
+        text-align: center;
+        margin: .6em .8em 0;
+        font-size: 1.2em;
+    }
+
+    #modalview-open-button {
+        margin: 0 3em;
+        padding: .5em;
+    }
+
+    #modalview-camera {
+        text-align: center;
+    }
+
+    #modalview-camera img {
+        display: block;
+        margin: 30px auto;
+    }
+
+    .km-ios #modalview-login {
+        height: 250px;
+    }
+
+    #modalview-camera .km-content,
+    .km-ios #modalview-login .km-content {
+        background: url(../../content/shared/images/patterns/pattern1.png) repeat 0 0;
+    }
+
+    .km-ios #modalview-camera .km-button,
+    .km-ios #modalview-login .km-button,
+    .km-ios #modalview-camera .km-navbar,
+    .km-ios #modalview-login .km-header {
+        background-color: #000;
+    }
+
+    .km-ios #modalview-camera .km-button:active,
+    .km-ios #modalview-camera .km-state-active,
+    .km-ios #modalview-login .km-button:active,
+    .km-ios #modalview-login .km-state-active {
+        background-color: #2e2e2e;
+    }
+
+    .km-ios #modalview-login #modalview-login-button {
+        background-color: Green;
+    }
+    
+    .km-tablet .km-ios #modalview-camera .km-view-title, .km-tablet .km-ios #modalview-login .km-view-title {
+        color: #fff;
+        text-shadow: 0 -1px rgba(0,0,0,.5);
+    }
+
+</style>
+<script>
+    function closeModalViewLogin() {
+        $("#modalview-login").kendoMobileModalView("close");
+    }
+</script>
+
+
+    <script>
+        window.kendoMobileApplication = new kendo.mobile.Application(document.body);
+    </script>
+</body>
+</html>

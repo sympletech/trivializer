@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trivializer</title>
+        <meta charset="utf-8" />
+
+        <link rel="stylesheet" type="text/css" href="/scripts/Kendo%20UI%20Mobile%20Q2%202012/styles/kendo.mobile.all.min.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/master.css" />
+
+    </head>
+    <body style="background: #000;">
+        <div data-role="view" id="tabstrip-home" data-title="Trivializer">
+            <h1>Welcome To Trivializer</h1>
+        </div>
+        
+        <div data-role="view" id="tabstrip-findGames" data-title="Find Games">
+            
+        </div>
+        
+       <div data-role="view" id="tabstrip-ingame" data-title="Game Name">
+            
+       </div>        
+        
+       <div data-role="view" id="tabstrip-currentStandings" data-title="Game Name">
+            
+       </div>           
+        
+        <script type="text/javascript" src="scripts/cordova-2.0.0.js"></script>
+        <script src="/scripts/jquery-1.7.2.min.js"></script>
+        <script src="/kendo/js/kendo.mobile.min.js"></script>
+        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>        
+
+        <script>
+            var app = new kendo.mobile.Application(document.body, { transition: "slide", layout: "mobile-tabstrip" });
+        </script>
+    </body>
+</html>
