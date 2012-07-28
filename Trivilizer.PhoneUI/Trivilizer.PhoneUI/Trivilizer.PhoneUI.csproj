@@ -1665,20 +1665,9 @@
     <Content Include="scripts\Kendo UI Mobile Q2 2012\styles\kendo.mobile.meego.min.css" />
     <None Include="scripts\Kendo UI Mobile Q2 2012\vsdoc\kendo.mobile-vsdoc.js" />
     <Content Include="styles\master.css" />
-    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
