@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic usage</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/kendo.mobile.min.js"></script>
+    <script src="../../content/shared/js/console.js"></script>
+    <link href="../../../styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="../../../styles/kendo.mobile.all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="../index.html">Back</a>
+    <div data-role="view" id="switch-home" data-init="mobileSwitchInit" data-title="User Settings">
+    <ul data-role="listview" data-style="inset" data-type="group">
+        <li>
+            <ul>
+                <li><h2>Eduardo <span>Saavedra</span></h2><img src="../../content/mobile/overview/eduardo.jpg" /></li>
+                <li>Brand Manager at Marketing Team</li>
+            </ul>
+        </li>
+
+        <li>Password
+            <ul>
+                <li>User cannot change pasword <input data-role="switch" id="email-switch" checked="checked" /></li>
+                <li>Password never expires <input id="wink-switch" /></li>
+            </ul>
+        </li>
+
+        <li>Newsletter Subscription
+            <ul>
+                <li>Subscribed <input id="subscription-switch" /></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<script>
+    function mobileSwitchInit() {
+        $("#wink-switch").kendoMobileSwitch();
+
+        $("#subscription-switch").kendoMobileSwitch({
+            checked: true,
+            onLabel: "YES",
+            offLabel: "NO"
+        });
+    }
+</script>
+
+<style scoped>
+#switch-home h2 {
+    display: inline-block;
+    font-size: 1.1em;
+    margin: 1.5em 0 0 1em;
+}
+#switch-home h2 span {
+    display: block;
+    clear: both;
+    font-size: 2em;
+    margin: .2em 0 0 0;
+}
+#switch-home img {
+    width: 5em;
+    height: 5em;
+    float: left;
+    margin: 1em;
+    -webkit-box-shadow: 0 1px 3px #333;
+    box-shadow: 0 1px 3px #333;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+</style>
+
+
+    <script>
+        window.kendoMobileApplication = new kendo.mobile.Application(document.body);
+    </script>
+</body>
+</html>

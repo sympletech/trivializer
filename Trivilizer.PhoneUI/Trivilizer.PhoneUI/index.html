@@ -4,12 +4,11 @@
     <title>Trivializer</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script type="text/javascript" src="scripts/cordova-2.0.0.js"></script>
-
     <script src="scripts/jquery-1.7.2.min.js"></script>
     <script src="scripts/Kendo%20UI%20Mobile%20Q2%202012/js/kendo.mobile.min.js"></script>
-
-
     <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="scripts/master.js"></script>
+
     <link rel="stylesheet" type="text/css" href="scripts/Kendo%20UI%20Mobile%20Q2%202012/styles/kendo.common.min.css" />
     <link rel="stylesheet" type="text/css" href="scripts/Kendo%20UI%20Mobile%20Q2%202012/styles/kendo.mobile.all.min.css" />
     <link rel="stylesheet" type="text/css" href="styles/master.css" />
@@ -29,38 +28,8 @@
         </div>
     </div>
     
-    
-   <!-- ********************* Find Game Screen ***********************  -->
-    <div data-role="view" id="tabstrip-findGames" data-title="Find Games">
-        <div data-role="view" data-title="Avialable Games" id="listview-home">
-            <ul data-role="listview" data-style="inset" data-type="group">
-                <li>
-                    Nearby
-                    <ul>
-                        <li data-icon="toprated"><a href="#tabstrip-ingame">Game Name</a></li>
-                        <li data-icon="toprated"><a href="#tabstrip-ingame">Game Name</a></li>
-                        <li data-icon="toprated"><a href="#tabstrip-ingame">Game Name</a></li>
-                        <li data-icon="toprated"><a href="#tabstrip-ingame">Game Name</a></li>
-                        <li data-icon="toprated"><a href="#tabstrip-ingame">Game Name</a></li>
-                        <li data-icon="toprated"><a href="#tabstrip-ingame">Game Name</a></li>
-                    </ul>
-                </li>
-                <li>
-                    Friends Currently Playing
-                    <ul>
-                        <li data-icon="toprated"><a href="#tabstrip-ingame">Game Name</a></li>
-                        <li data-icon="toprated"><a href="#tabstrip-ingame">Game Name</a></li>
-                        <li data-icon="toprated"><a href="#tabstrip-ingame">Game Name</a></li>
-                        <li data-icon="toprated"><a href="#tabstrip-ingame">Game Name</a></li>
-                        <li data-icon="toprated"><a href="#tabstrip-ingame">Game Name</a></li>
-                        <li data-icon="toprated"><a href="#tabstrip-ingame">Game Name</a></li>
-                        <li data-icon="toprated"><a href="#tabstrip-ingame">Game Name</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-    
+    <div data-role="view" id="tabstrip-findGames" data-title="Find Games" data-src="FindGame.html"></div>
+
     
     <!-- ********************* In Game Screen ***********************  -->
     <div data-role="view" id="tabstrip-ingame" data-title="In Game Screen">
@@ -82,8 +51,6 @@
         
     </div>
     
-
-
     <div data-role="view" id="tabstrip-currentStandings" data-title="Current Standings">
         <ul class="standings">
             <li>1000 pts - Bugs Bunny</li>
@@ -109,6 +76,7 @@
     </div>
     
     <script>
+        LoadPages();
         var app = new kendo.mobile.Application(document.body, { transition: "slide", layout: "master-layout" });
         
         $("#btn-tabstrip-home-enter, .game-link").kendoMobileButton();

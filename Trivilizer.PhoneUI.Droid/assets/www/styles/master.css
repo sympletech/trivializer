@@ -1,0 +1,23 @@
+﻿body {
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a82f7), to(#2F2727));
+
+}
+
+div[data-role="view"] {
+    height: 800px;
+}
+
+#tabstrip-home{}
+#tabstrip-home #logo {
+    text-align: center;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.question-wrapper {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    border: solid 1px #000;
+    background: snow;
+}

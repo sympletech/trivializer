@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loading popup</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/kendo.mobile.min.js"></script>
+    <script src="../../content/shared/js/console.js"></script>
+    <link href="../../../styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="../../../styles/kendo.mobile.all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="../index.html">Back</a>
+    <div id="loading" data-role="view" class="km-insetcontent" data-init="viewInit" data-hide="viewHide" data-title="Loading Popup">
+    <button id="show" data-role="button">Show Loading Popup</button>
+</div>
+
+<script>
+    var showButton, interval;
+
+    function viewInit(e) {
+        showButton = $("#show").bind(kendo.support.mouseup, function() {
+                        showButton.stop(true,true).fadeOut();
+                        startLoading();
+                     });
+    }
+
+    var loaderElement = kendoMobileApplication.pane.loader.element.find("h1");
+
+    function hideLoader() {
+        clearInterval(interval);
+        kendoMobileApplication.hideLoading(); //hide loading popup
+        loaderElement.removeClass("loaderHeading").text("Loading...");
+    }
+
+    function viewHide(e) {
+        showButton.stop(true,true).fadeIn();
+        hideLoader();
+    }
+
+    function startLoading() {
+        hideLoader();
+        var seconds = 5;
+
+        loaderElement.text(seconds + " seconds left!").addClass("loaderHeading");
+
+        kendoMobileApplication.showLoading(); //show loading popup
+
+        interval = setInterval(function() {
+            loaderElement.text(--seconds + " seconds left!"); //update text of the loading popup
+
+            if (seconds == 0) {
+                showButton.stop(true,true).fadeIn();
+                hideLoader();
+            }
+        }, 1000);
+    }
+</script>
+
+<style scoped>
+    .km-ios #loading .km-content
+    {
+        background: transparent;
+    }
+
+    #loading .km-content
+    {
+        text-align: center;
+    }
+
+    #show 
+    {
+        margin-top: 100px;
+        font-size: 1.5rem;
+    }
+    
+    /* Example Counter */
+    .km-meego h1.loaderHeading,
+    .km-android h1.loaderHeading,
+    .km-blackberry h1.loaderHeading
+    {
+        display: block;
+        position: absolute;
+        overflow: hidden;
+        width: 1em;
+        left: 50%;
+        height: 1em;
+        top: 50%;
+        font-size: 1.2rem;
+        margin: -.65em 0 0 -.5em;
+    }
+
+    .km-ios h1.loaderHeading 
+    {
+    	font-size: 1rem;
+    }
+    .km-meego h1.loaderHeading,
+    .km-blackberry h1.loaderHeading
+    {
+        font-size: 1.5rem;
+    }
+</style>
+
+
+    <script>
+        window.kendoMobileApplication = new kendo.mobile.Application(document.body);
+    </script>
+</body>
+</html>
