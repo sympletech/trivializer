@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/kendo.mobile.min.js"></script>
+    <script src="../../content/shared/js/console.js"></script>
+    <link href="../../../styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="../../../styles/kendo.mobile.all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="../index.html">Back</a>
+    <div data-role="view"id="button-events" data-title="Button Events">
+    <a id="mobile-button1" data-click="logClick" data-role="button" style="display: block; margin: 2em; text-align: center;">Trigger Event 1</a>
+    <a id="mobile-button2" data-click="logClick" data-role="button" style="display: block; margin: 2em; text-align: center;">Trigger Event 2</a>
+    <a id="mobile-button3" data-click="logClick" data-role="button" style="display: block; margin: 2em; text-align: center;">Trigger Event 3</a>
+    <div class="console"></div>
+</div>
+
+<script>
+    function logClick(e) {
+        kendoConsole.log(this.element.prop("id") + " was clicked!");
+    }
+</script>
+
+<style scoped>
+    .km-root .console {
+        background-color: transparent;
+        border: 0;
+        margin: 1.4em 1em;
+        overflow: hidden;
+        height: auto;
+    }
+</style>
+
+
+    <script>
+        window.kendoMobileApplication = new kendo.mobile.Application(document.body);
+    </script>
+</body>
+</html>

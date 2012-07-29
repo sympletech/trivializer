@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pull to refresh</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/kendo.mobile.min.js"></script>
+    <script src="../../content/shared/js/console.js"></script>
+    <link href="../../../styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="../../../styles/kendo.mobile.all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="../index.html">Back</a>
+    <div data-role="view" data-init="mobileListViewPullToRefresh" data-title="Pull to refresh">
+    <header data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title"></span>
+            <a data-align="right" data-role="button" class="nav-button" href="#index">Index</a>
+        </div>
+    </header>
+
+    <ul id="pull-to-refresh-listview"></ul>
+</div>
+
+<script id="pull-to-refresh-template" type="text/x-kendo-template">
+    <div class="tweet">
+        <img class="pullImage" src="#= profile_image_url #" alt="#= from_user #" />#= text #
+        <div class="metadata">
+            <a class="sublink" target="_blank" href="http://twitter.com/\\#!/#= from_user #/status/#= id_str #" rel="nofollow">#= kendo.toString(new Date(Date.parse(created_at)), "dd MMM HH:mm") #</a>
+            |
+            <a class="sublink" href="http://twitter.com/#= from_user #" rel="nofollow">#= from_user #</a>
+        </div>
+    </div>
+</script>
+
+<script>
+    function mobileListViewPullToRefresh() {
+            var lastID;
+            var dataSource = new kendo.data.DataSource({
+                serverPaging: true,
+                transport: {
+                    read: {
+                        url: "http://search.twitter.com/search.json", // the remove service url
+                        dataType: "jsonp" // JSONP (JSON with padding) is required for cross-domain AJAX
+                    },
+                    parameterMap: function(options) {
+                        var page = options.page;
+                        var parameters = {
+                            q: "javascript",
+                            since_id: lastID //additional parameters sent to the remote service
+                        }
+
+                        return parameters;
+                    }
+                },
+                change: function() {
+                    var item = this.view()[0];
+
+                    if (item) {
+                        lastID = item.id_str;
+                    }
+                },
+                schema: { // describe the result format
+                    data: "results" // the data which the data source will be bound to is in the "results" field
+                }
+            });
+
+        $("#pull-to-refresh-listview").kendoMobileListView({
+            dataSource: dataSource,
+            pullToRefresh: true,
+            appendOnRefresh: true,
+            template: $("#pull-to-refresh-template").text()
+        });
+    }
+</script>
+
+<style scoped>
+    .tweet {
+        font-size: .8em;
+        line-height: 1.4em;
+    }
+    .pullImage {
+        width: 64px;
+        height: 64px;
+        border-radius: 3px;
+        float: left;
+        margin-right: 10px;
+    }
+    .sublink {
+        font-size: .9em;
+        font-weight: normal;
+        display: inline-block;
+        padding: 3px 3px 0 0;
+        text-decoration: none;
+        opacity: .8;
+    }
+</style>
+
+
+    <script>
+        window.kendoMobileApplication = new kendo.mobile.Application(document.body);
+    </script>
+</body>
+</html>

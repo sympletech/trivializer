@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/kendo.mobile.min.js"></script>
+    <script src="../../content/shared/js/console.js"></script>
+    <link href="../../../styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="../../../styles/kendo.mobile.all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="../index.html">Back</a>
+    <div data-role="view" id="buttongroup-events" data-init="mobileButtonGroupEventsInit" data-title="Player">
+    <div class="photo">
+    </div>
+    <ul id="button-group" data-role="buttongroup" data-index="3" data-select="selectButton">
+       <li data-icon="rewind">
+       </li>
+       <li data-icon="play">
+       </li>
+       <li data-icon="pause">
+       </li>
+       <li data-icon="stop">
+       </li>
+       <li data-icon="fastforward">
+       </li>
+    </ul>
+    <div class="console"></div>
+</div>
+
+<script>
+    function selectButton() {
+        kendoConsole.log("Selected button: " + this.current().index());
+    }
+</script>
+
+<style scoped>
+    #buttongroup-events .km-button:not(.km-back) {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    #buttongroup-events .photo {
+        width: 277px;
+        margin: 1em auto;
+        height: 120px;
+        background: url("../../content/mobile/shared/player.jpg") no-repeat center center;
+        -webkit-background-size: auto 100%;
+        background-size: auto 100%;
+    }
+    #button-group {
+        margin: 1em auto;
+    }
+    .km-root .console {
+        background-color: transparent;
+        border: 0;
+        margin: 1.4em 1em;
+        overflow: hidden;
+        height: auto;
+    }
+</style>
+
+
+    <script>
+        window.kendoMobileApplication = new kendo.mobile.Application(document.body);
+    </script>
+</body>
+</html>

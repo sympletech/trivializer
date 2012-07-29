@@ -1,0 +1,411 @@
+
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Changelog for Kendo UI v2012.2.710</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: .75em/1.5 Tahoma, sans-serif;
+        }
+
+        h2 {
+            margin: 1em 0 .3em;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: .2em;
+        }
+
+        #page {
+            width: 50em;
+            margin: 0 auto 2em;
+            border-radius: 0 0 1em 1em;
+            box-shadow: 0 0 10px #ccc;
+            padding: 1em 2em 2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="page">
+        <h1>Release notes for Kendo UI v2012.2.710</h1>
+    
+    
+    
+        
+        
+        
+        <h2>Core</h2>
+
+        
+    
+    <h4>What's new</h4>
+    <ul>
+        
+        <li>Cannot parse JSON data attribute values which start or end with a whitespace</li>
+        
+        <li>kendo.parseDate supports ISO8601 formatted date.</li>
+        
+        <li>Kendo Web widgets are initialized in a mobile application based on data role (using kendo.all.js).</li>
+        
+        <li>kendo.init supports variable amount of suites to initialize from</li>
+        
+    </ul>
+    
+
+        
+    
+
+
+        
+        
+        
+
+        
+        
+        
+        <h3>DataSource</h3>
+
+            
+
+            
+    
+    <h4>What's new</h4>
+    <ul>
+        
+        <li>Custom data handler has access to predefined request data</li>
+        
+        <li>Add support for filtering on values not contained in a given string</li>
+        
+    </ul>
+    
+
+            
+    
+    <h4>What's fixed</h4>
+    <ul>
+        
+        <li>Inserting a new record in XML data source throws JavaScript error</li>
+        
+        <li>Filter expressions are not cleared if additional data is assigned through the transport's data</li>
+        
+        <li>Group values are not converted to the field types when server grouping is enabled</li>
+        
+    </ul>
+    
+
+        
+        
+        
+        <h3>Draggable</h3>
+
+            
+
+            
+    
+    <h4>What's new</h4>
+    <ul>
+        
+        <li>Draggable supports container constraint option</li>
+        
+        <li>Draggable supports axis (x | y) constraint option </li>
+        
+    </ul>
+    
+
+            
+    
+
+        
+        
+        
+        <h3>Globalization</h3>
+
+            
+
+            
+    
+    <h4>What's new</h4>
+    <ul>
+        
+        <li>kendo.parseDate supports Date strings with timezone.</li>
+        
+        <li>kendo.parseDate returns null if no AM/PM specifier is provided</li>
+        
+    </ul>
+    
+
+            
+    
+    <h4>What's fixed</h4>
+    <ul>
+        
+        <li>Currency formatted strings are not parsed correctly if "en-ZA" culture is used</li>
+        
+    </ul>
+    
+
+        
+        
+        
+        <h3>MVVM</h3>
+
+            
+
+            
+    
+    <h4>What's new</h4>
+    <ul>
+        
+        <li>ObservableObject's toJSON method should be recursive</li>
+        
+    </ul>
+    
+
+            
+    
+    <h4>What's fixed</h4>
+    <ul>
+        
+        <li>Changes in parent fields bound to a template are not reflected</li>
+        
+        <li>Value of the input with update on keyup is not updated in some cases</li>
+        
+    </ul>
+    
+
+        
+        
+        
+        <h3>Validator</h3>
+
+            
+
+            
+    
+
+            
+    
+    <h4>What's fixed</h4>
+    <ul>
+        
+        <li>Pattern rule should be executed for input elements of type password</li>
+        
+        <li>Show decoded validation message text</li>
+        
+    </ul>
+    
+
+        
+        
+        
+    
+        
+        
+        
+        <h2>Mobile</h2>
+
+        
+    
+    <h4>What's new</h4>
+    <ul>
+        
+        <li>Icons now in external image, preloaded for instant rendering.</li>
+        
+        <li>Transformation effects can't be stacked</li>
+        
+        <li>New SplitView widget (Tablet specific)</li>
+        
+        <li>New ModalView Widget</li>
+        
+        <li>New Popover widget (Tablet specific)</li>
+        
+        <li>Mobile view init event handlers are executed when the view is visible</li>
+        
+        <li>Mobile View fires beforeShow event (can be prevented using preventDefault call)</li>
+        
+        <li>ListView "autobind" option</li>
+        
+        <li>Fixed group headers listview</li>
+        
+    </ul>
+    
+
+        
+    
+    <h4>What's fixed</h4>
+    <ul>
+        
+        <li>Form input elements have wrong styling in final CSS.</li>
+        
+        <li>Form input elements on Android are duplicated</li>
+        
+        <li>Scroller widget does not reset itself on orientation change</li>
+        
+    </ul>
+    
+
+
+        
+        
+        
+
+        
+        
+        
+        <h3>ActionSheet</h3>
+
+            
+
+            
+    
+    <h4>What's new</h4>
+    <ul>
+        
+        <li>ActionSheet uses mobile popup when a tablet is detected</li>
+        
+    </ul>
+    
+
+            
+    
+
+        
+        
+        
+        <h3>Application</h3>
+
+            
+
+            
+    
+    <h4>What's new</h4>
+    <ul>
+        
+        <li>Implement data-transition setting on navigational widgets</li>
+        
+    </ul>
+    
+
+            
+    
+
+        
+        
+        
+        <h3>DropDownList</h3>
+
+            
+
+            
+    
+
+            
+    
+    <h4>What's fixed</h4>
+    <ul>
+        
+        <li>DropDownList styling is broken in Mobile</li>
+        
+    </ul>
+    
+
+        
+        
+        
+        <h3>ListView</h3>
+
+            
+
+            
+    
+
+            
+    
+    <h4>What's fixed</h4>
+    <ul>
+        
+        <li>Widget with enabled "endless scrolling" makes multiple requests</li>
+        
+    </ul>
+    
+
+        
+        
+        
+        <h3>ScrollView</h3>
+
+            
+
+            
+    
+    <h4>What's new</h4>
+    <ul>
+        
+        <li>Improved scrollview page change when orientation changes</li>
+        
+    </ul>
+    
+
+            
+    
+
+        
+        
+        
+        <h3>Slider</h3>
+
+            
+
+            
+    
+
+            
+    
+    <h4>What's fixed</h4>
+    <ul>
+        
+        <li>Slider does not work in Kendo UI Mobile</li>
+        
+    </ul>
+    
+
+        
+        
+        
+        <h3>View</h3>
+
+            
+
+            
+    
+    <h4>What's new</h4>
+    <ul>
+        
+        <li>Mobile View supports "stretch" configuration option (off by default).</li>
+        
+        <li>Implement " reverse" transition setting</li>
+        
+    </ul>
+    
+
+            
+    
+
+        
+        
+        
+        
+        
+    
+    </div>
+</body>
+</html>

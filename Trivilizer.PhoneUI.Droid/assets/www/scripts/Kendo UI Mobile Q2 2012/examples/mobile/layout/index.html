@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Overview</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/kendo.mobile.min.js"></script>
+    <script src="../../content/shared/js/console.js"></script>
+    <link href="../../../styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="../../../styles/kendo.mobile.all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="../index.html">Back</a>
+    <div data-role="view" data-layout="layout" data-title="Platform" data-show="layoutShow" id="layoutView">
+    <p>
+        This examples shows the platform specific layouts. Change the OS to see how the header and footer changes.
+    </p>
+</div>
+
+<div data-role="layout" data-id="layout" data-platform="ios">
+    <header data-role="header">
+        <div data-role="navbar">
+            <a data-align="left" data-role="button" class="nav-button" href="#index">Index</a>
+            <span data-role="title">iOS Platform</span>
+        </div>
+    </header>
+    <footer data-role="footer">
+        <div data-role="tabstrip">
+            <a data-icon="contacts">Profile</a>
+            <a data-icon="settings">Settings</a>
+        </div>
+    </footer>
+</div>
+
+<div data-role="layout" data-id="layout" data-platform="android">
+    <header data-role="header">
+        <div data-role="navbar">
+            <span data-role="title">Android Platform</span>
+            <a data-align="right" data-role="button" class="nav-button" href="#index">Index</a>
+        </div>
+    </header>
+
+    <footer data-role="footer">
+        <div data-role="tabstrip">
+            <a data-icon="history">Sales</a>
+            <a data-icon="settings">Settings</a>
+        </div>
+    </footer>
+</div>
+
+<div data-role="layout" data-id="layout" data-platform="blackberry">
+    <header data-role="header">
+        <div data-role="navbar">
+            <a data-align="left" data-role="button" class="nav-button" href="#index">Index</a>
+            <span data-role="title">BlackBerry platform</span>
+        </div>
+    </header>
+
+    <footer data-role="footer">
+        <div data-role="tabstrip">
+            <a data-icon="favorites">Rating</a>
+            <a data-icon="settings">Settings</a>
+        </div>
+    </footer>
+</div>
+
+<style scoped>
+    #layoutView .km-view-title
+    {
+        display: inherit;
+    }
+
+    .km-android #layoutView .km-view-title
+    {
+        display: block;
+        position: static;
+    }
+</style>
+
+
+    <script>
+        window.kendoMobileApplication = new kendo.mobile.Application(document.body);
+    </script>
+</body>
+</html>
