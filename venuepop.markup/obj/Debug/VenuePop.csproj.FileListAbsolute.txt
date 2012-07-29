@@ -1,0 +1,10 @@
+c:\users\owner\documents\visual studio 2010\Projects\VenuePop\VenuePop\bin\VenuePop.dll
+c:\users\owner\documents\visual studio 2010\Projects\VenuePop\VenuePop\bin\VenuePop.pdb
+c:\users\owner\documents\visual studio 2010\Projects\VenuePop\VenuePop\obj\Debug\ResolveAssemblyReference.cache
+c:\users\owner\documents\visual studio 2010\Projects\VenuePop\VenuePop\obj\Debug\VenuePop.dll
+c:\users\owner\documents\visual studio 2010\Projects\VenuePop\VenuePop\obj\Debug\VenuePop.pdb
+C:\Users\Daniel\Projects\Trivializer\venuepop.markup\bin\VenuePop.dll
+C:\Users\Daniel\Projects\Trivializer\venuepop.markup\bin\VenuePop.pdb
+C:\Users\Daniel\Projects\Trivializer\venuepop.markup\obj\Debug\VenuePop.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Projects\Trivializer\venuepop.markup\obj\Debug\VenuePop.dll
+C:\Users\Daniel\Projects\Trivializer\venuepop.markup\obj\Debug\VenuePop.pdb

@@ -1,4 +1,11 @@
 ﻿$(function () {
+    $('#vpophdr').fadeIn();
+
+    $(".img-btn").live("click", function () {
+        var href = $(this).attr("data-link");
+        window.location.href = href;
+    });
+
     InitFindGamePage();
 });
 
@@ -52,28 +59,14 @@ function LocationError(error) {
 //****************************
 //      Find A Game Page 
 //****************************
+$("#tabstrip-home #login").click(function() {
+});
+
+
+//****************************
+//      Find A Game Page 
+//****************************
 function InitFindGamePage() {
 
 }
 
-function GetNearbyGames() {
-    var game = {
-        Id: 1,
-        Name: 'Test Game',
-        Description: 'This is a test game'
-    };
-
-    var games = [];
-
-    for (var i = 0; i < 3; i++) {
-        games.push(game);
-    }
-
-    for (var i in games) {
-        $('#nearby-games').append("<li data-icon='toprated'>" +
-            "<a class='game-link' data-game-id='" + games[i].Id + "' href='#tabstrip-ingame'>" +
-            "<div class='game-name'>" + games[i].Name + "</div>" +
-            "<div class=''>" + games[i].Description + "</div>" +
-            "</a></li>");
-    }
-}

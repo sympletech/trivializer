@@ -1,6 +1,12 @@
-﻿<script type="text/javascript">
+﻿<script type="text/javascript" src="scripts/vpopGame.js"></script>
+<script type="text/javascript">
     $(function () {
         var game_id = ReadQueryString('gameId');
+        LoadNextQuestion(game_id);
+    });
+    
+    function LoadNextQuestion(gameID) {
+        
         var question = {
             QuestionId: 3,
             Question: 'Why did the chicken cross the road?',
@@ -10,19 +16,51 @@
             Option3: 'To Rob A Bank',
             Option4: 'To Get To The Other Side'
         };
-        
+
         $(".question-wrapper .question-number").html(question.QuestionId);
-        $(".question-wrapper .question").html(question.Question);
-        $(".answers").append('<li>A. ' + question.Option1 + '</li>');
-        $(".answers").append('<li>B. ' + question.Option2 + '</li>');
-        $(".answers").append('<li>C. ' + question.Option3 + '</li>');
-        $(".answers").append('<li>D. ' + question.Option4 + '</li>');
-    });
+        $("#questionSection").html(question.Question);
+        $("#answer1").html('<li>A. ' + question.Option1 + '</li>');
+        $("#answer2").append('<li>B. ' + question.Option2 + '</li>');
+        $("#answer3").append('<li>C. ' + question.Option3 + '</li>');
+        $("#answer4").append('<li>D. ' + question.Option4 + '</li>');
+        $("#correctAnswer").val(question.AnswerId);
+    }
+
 </script>
+<input type="hidden" id="correctAnswer" />
+<div class="view-surface">
+    <div style="text-align: center;">
+        <img src="images/venuepop-mini-header.png" />
+    </div>
 
-<div class="question-wrapper">
-    <div class="question-number"></div>
-    <div class="question"></div>
+    <table style="width: 400px;" align="center">
+        <tr>
+            <td>
+                <div class="gameHeaderItem">Player 1</div>
+            </td>
+            <td>
+                <div id="theTimer" style="font-family: Arial, Helvetica; width: 60px; height: 45px; font-size: 30pt; color: #ffff00; margin-left: auto; margin-right: auto; background-color: #000000; border: 4px solid #aaaaaa; padding: 8px; text-align: center; border-radius: 10px;">:15</div>
+
+            </td>
+            <td>
+                <div class="gameHeaderItem">Score: 0</div>
+            </td>
+        </tr>
+    </table>
+    <div style="padding-top: 8px;"></div>
+    <div id="questionSection" style="-webkit-box-shadow: 0px 0px 2px 2px #000000; display: none; padding: 10px; font-size: 15px; background-color: #000000; border: 10px solid #aaaaaa; border-radius: 10px; width: 300px; margin-left: auto; margin-right: auto; color: #ffffff; font-family: Arial, Helvetica; font-size: 18pt;">What does Hatha like in his Soy Latte?</div>
+    <div id="answerContainer">
+        <div class="largespacer"></div>
+        <div id="answer1" class="answers"></div>
+        <div class="spacer"></div>
+        <div id="answer2" class="answers"></div>
+        <div class="spacer"></div>
+        <div id="answer3" class="answers"></div>
+        <div class="spacer"></div>
+        <div id="answer4" class="answers"></div>
+        <div class="spacer"></div>
+    </div>
+    <div id="nextButtonContainer" style="padding-top: 15px; display: none;">
+        <div id="nextButton" class="bluebutton">Next</div>
+    </div>
 </div>
-
-<ul class="answers"></ul>

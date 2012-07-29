@@ -7,32 +7,37 @@
     <script src="scripts/jquery-1.7.2.min.js"></script>
     <script src="scripts/Kendo%20UI%20Mobile%20Q2%202012/js/kendo.mobile.min.js"></script>
     <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    
     <script type="text/javascript" src="scripts/master.js"></script>
 
     <link rel="stylesheet" type="text/css" href="scripts/Kendo%20UI%20Mobile%20Q2%202012/styles/kendo.common.min.css" />
     <link rel="stylesheet" type="text/css" href="scripts/Kendo%20UI%20Mobile%20Q2%202012/styles/kendo.mobile.all.min.css" />
-    <link rel="stylesheet" type="text/css" href="styles/master.css" />
+    <link rel="stylesheet" type="text/css" href="styles/VenuePopMain.css" />
 </head>
 <body>
+    <audio id="popSound"><source src="audio/popSound.mp3" /></audio>
+
     <!-- ********************* Home Screen ***********************  -->
     <div id="tabstrip-home" data-role="view" data-title="Trivializer">
-        <h1>Welcome to Trivializer</h1>
-
-        <div id="logo">
-            <img src="images/logo.png" />
-        </div>
-        
-        <div style="text-align: center; padding: 15px;">
-            <a id="btn-tabstrip-home-enter" class="button" data-role="button" href="#tabstrip-findGames">Find A Game</a>
+        <div class="view-surface" style="text-align: center;">
+            <div id="vpophdr" style="display: none; padding: 50px;">
+                <img src="images/venuepop-headerlogo.png" /></div>
+            <br />
+            <img id="login" class="img-btn" data-link="#tabstrip-login" src="images/login-up.png" onmousedown="this.src='images/login-click.png'; popSound.play();" onmouseup="this.src='images/login-up.png'" />
+            <br />
+            <img id="newgame" class="img-btn" src="images/newgame-up.png" onmousedown="this.src='images/newgame-click.png'; popSound.play(); location.href='gamepage.aspx'" onmouseup="this.src='images/newgame-up.png'" />
+            <br />
+            <img id="locategame" class="img-btn" src="images/locategame-up.png" onmousedown="this.src='images/locategame-click.png'; popSound.play();" onmouseup="this.src='images/locategame-up.png'" />
         </div>
     </div>
-    
-    
-    <!-- Template -->
+
+
+    <div data-role="view" id="tabstrip-login" data-title="Please Log-In" data-src="login.html"></div>
     <div data-role="view" id="tabstrip-findGames" data-title="Find Games" data-src="findGame.html"></div>
     <div data-role="view" id="tabstrip-ingame" data-title="In Game Screen" data-src="inGame.html"></div>
     <div data-role="view" id="tabstrip-currentStandings" data-title="Current Standings" data-src="currentStandings.html"></div>
-
+    
+    <!-- Template -->
     <div data-role="layout" data-id="master-layout">
         <header data-role="header">
             <div data-role="navbar">
@@ -48,11 +53,11 @@
             </div>
         </div>
     </div>
-    
+
     <script>
         LoadPages();
         var app = new kendo.mobile.Application(document.body, { transition: "slide", layout: "master-layout" });
-        
+
         $("#btn-tabstrip-home-enter, .game-link").kendoMobileButton();
     </script>
 </body>

@@ -57,12 +57,27 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="audio\pop.mp3" />
+    <Content Include="audio\pop.wav" />
+    <Content Include="audio\popSound.mp3" />
     <Content Include="config.xml" />
     <Content Include="currentStandings.html" />
     <Content Include="FindGame.html" />
+    <Content Include="images\burst.jpg" />
+    <Content Include="images\darkburst.jpg" />
+    <Content Include="images\facebook_logo.png" />
+    <Content Include="images\locategame-click.png" />
+    <Content Include="images\locategame-up.png" />
+    <Content Include="images\login-click.png" />
+    <Content Include="images\login-up.png" />
     <Content Include="images\logo.png" />
+    <Content Include="images\newgame-click.png" />
+    <Content Include="images\newgame-up.png" />
+    <Content Include="images\venuepop-headerlogo.png" />
+    <Content Include="images\venuepop-mini-header.png" />
     <Content Include="index.html" />
     <Content Include="inGame.html" />
+    <Content Include="login.html" />
     <Content Include="scripts\cordova-2.0.0.js" />
     <Content Include="scripts\jquery-1.7.2.min.js" />
     <Content Include="scripts\Kendo UI Mobile Q2 2012\changelog.html" />
@@ -1669,6 +1684,8 @@
     <Content Include="scripts\Kendo UI Mobile Q2 2012\styles\kendo.mobile.blackberry.min.css" />
     <Content Include="scripts\Kendo UI Mobile Q2 2012\styles\kendo.mobile.ios.min.css" />
     <Content Include="scripts\Kendo UI Mobile Q2 2012\styles\kendo.mobile.meego.min.css" />
+    <Content Include="styles\VenuePopMain.css" />
+    <Content Include="scripts\vpopGame.js" />
     <None Include="scripts\Kendo UI Mobile Q2 2012\vsdoc\kendo.mobile-vsdoc.js" />
     <Content Include="scripts\master.js" />
     <Content Include="styles\master.css" />

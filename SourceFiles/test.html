@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <script src="cordova.js"></script>
+        <script src="kendo/js/jquery.min.js"></script>
+        <script src="kendo/js/kendo.mobile.min.js"></script>
+   
+        <script src="scripts/hello-world.js"></script>
+
+        <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+        <link href="styles/main.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div data-role="view" id="home" data-title="Venue Pop">
+            <h1>Login</h1>
+            <p>
+                <a href="#flat" data-role="button" data-icon="connet">Facebook</a> 
+            </p>
+            <p>
+                 <a href="#flat" data-role="button" data-icon="connet">Guest</a>
+            </p>
+        </div>
+
+    <div data-role="view" id="flat"  data-title="Games List">
+        <ul data-role="listview" data-template="listItem" data-source="flatData"></ul>
+    </div>
+        
+    <div data-role="view" id="questions" data-title="Who is Tony Stark?">
+        <ul data-role="listview" >
+            <li class='answers'>A - Batman</li>
+            <li class='answers'>B - Superman</li>
+            <li class='answers'>C - Spongebob</li>
+            <li class='answers'>D- Ironman</li>
+        </ul>
+        <div class="messages">
+            Drink special! $1 all beers for the next 20  minutes.
+        </div>
+    </div>    
+        
+    <script type="script/x-kendo-template" id="listItem">
+        <h2><a href="\\#questions">#: venue#</a></h2>
+    </script>
+        
+        <div data-role="layout" data-id="mobile-tabstrip">
+            <header data-role="header">
+                <div data-role="navbar">
+                    <span data-role="view-title"></span>
+                </div>
+            </header>
+
+            <div data-role="footer">
+                <div data-role="tabstrip">
+                    <a href="#home" data-icon="home">Home</a>
+                    <a href="#flat" data-icon="share">Games</a>
+                </div>
+            </div>
+        </div>
+<script>
+
+    var flatData = [{ venue: "IO/LA" }, { venue: "Walk of fame" }, { venue: "Chili's" }];
+
+
+
+</script>
+        <script>
+            var app = new kendo.mobile.Application(document.body, { transition: "slide", layout: "mobile-tabstrip" });
+        </script>
+    </body>
+</html>s
