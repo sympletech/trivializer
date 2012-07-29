@@ -1,10 +1,9 @@
 ﻿body {
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a82f7), to(#2F2727));
-
 }
 
-div[data-role="view"] {
+.km-view {
     height: 800px;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a82f7), to(#2F2727));
 }
 
 #tabstrip-home{}
