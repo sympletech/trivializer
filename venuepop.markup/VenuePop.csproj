@@ -15,11 +15,10 @@
     <AssemblyName>VenuePop</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
-    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -62,7 +61,9 @@
     <Content Include="audio\pop.wav" />
     <Content Include="css\VenuePopMain.css" />
     <Content Include="default.aspx" />
+    <Content Include="gamelist.aspx" />
     <Content Include="gamepage.aspx" />
+    <Content Include="images\1ee08019a3f574bf5e19b8931b06849b.png" />
     <Content Include="images\burst.jpg" />
     <Content Include="images\darkburst.jpg" />
     <Content Include="images\locategame-click.png" />
@@ -71,11 +72,14 @@
     <Content Include="images\login-up.png" />
     <Content Include="images\newgame-click.png" />
     <Content Include="images\newgame-up.png" />
+    <Content Include="images\qrcode.png" />
     <Content Include="images\venuepop-headerlogo.png" />
     <Content Include="images\venuepop-mini-header.png" />
     <Content Include="js\jquery-1.7.2.min.js" />
     <Content Include="js\vpopGame.js" />
     <Content Include="js\vpopIndex.js" />
+    <Content Include="js\vpoploginScan.js" />
+    <Content Include="loginScan.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -92,12 +96,26 @@
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="gamelist.aspx.cs">
+      <DependentUpon>gamelist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gamelist.aspx.designer.cs">
+      <DependentUpon>gamelist.aspx</DependentUpon>
+    </Compile>
     <Compile Include="gamepage.aspx.cs">
       <DependentUpon>gamepage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="gamepage.aspx.designer.cs">
       <DependentUpon>gamepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="loginScan.aspx.cs">
+      <DependentUpon>loginScan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loginScan.aspx.designer.cs">
+      <DependentUpon>loginScan.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

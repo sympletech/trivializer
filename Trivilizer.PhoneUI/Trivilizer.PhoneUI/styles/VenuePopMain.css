@@ -64,7 +64,7 @@
 
 .answers {
     font-family: Arial, Helvetica;
-    font-size: 14pt;
+    font-size: 10pt;
     color: #ffffff;
     width: 300px;
     padding: 8px;
@@ -100,4 +100,38 @@
     color: #ffffff;
     font-family: Arial, Helvetica;
     font-size: 18pt;
+}
+
+
+#availGames {
+    color: #ffffff;
+    background-color: #000000;
+    width: 450px;
+    font-size: 18pt;
+    padding: 8px;
+    font-family:Arial, Helvetica;
+    text-align: center;
+    border-radius: 5px 5px 0px 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.availGameEntry {
+    width: 450px;
+    font-size: 16pt;
+    font-family: Arial, Helvetica;
+    color: #000000;
+    padding: 8px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #aaaaaa;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+.availGameEntry:hover {
+    background: #ffffaa;
+}
+
+.cat {
+    font-size: 10px;
 }

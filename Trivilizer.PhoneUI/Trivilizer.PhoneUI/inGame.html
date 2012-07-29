@@ -1,34 +1,77 @@
 ﻿<script type="text/javascript" src="scripts/vpopGame.js"></script>
+<script type="text/javascript" src="scripts/questions.js"></script>
 <script type="text/javascript">
     $(function () {
         var game_id = ReadQueryString('gameId');
-        LoadNextQuestion(game_id);
-    });
-    
-    function LoadNextQuestion(gameID) {
-        
-        var question = {
-            QuestionId: 3,
-            Question: 'Why did the chicken cross the road?',
-            AnswerId: 4,
-            Option1: 'To Find His Car',
-            Option2: 'To Help a kid',
-            Option3: 'To Rob A Bank',
-            Option4: 'To Get To The Other Side'
-        };
+        LoadNextQuestion(1);
 
-        $(".question-wrapper .question-number").html(question.QuestionId);
-        $("#questionSection").html(question.Question);
-        $("#answer1").html('<li>A. ' + question.Option1 + '</li>');
-        $("#answer2").append('<li>B. ' + question.Option2 + '</li>');
-        $("#answer3").append('<li>C. ' + question.Option3 + '</li>');
-        $("#answer4").append('<li>D. ' + question.Option4 + '</li>');
-        $("#correctAnswer").val(question.AnswerId);
+        //$(".answers").click(function () {
+        //    $("#nextButtonContainer").show();
+        //});
+
+        $("#inGame #nextButton").click(function () {
+            var qID = parseInt($("#curQuestion").val()) + 1;
+            console.log(qID);
+            LoadNextQuestion(qID);
+        });
+    });
+
+    function LoadNextQuestion(qID) {
+        $("#curQuestion").val(qID);
+        if (qID == 8) {
+            window.location.href = "#tabstrip-currentStandings";
+        } else {
+            $(".answers").removeClass('correctAnswer').removeClass('wrongAnswer').show();
+            $("#inGame #nextButtonContainer").hide();
+            $(".question-wrapper .question-number").html(questions[qID].QuestionId);
+            $("#questionSection").html(questions[qID].Question);
+            $("#answer1").html('<li>A. ' + questions[qID].Option1 + '</li>');
+            $("#answer2").html('<li>B. ' + questions[qID].Option2 + '</li>');
+            $("#answer3").html('<li>C. ' + questions[qID].Option3 + '</li>');
+            $("#answer4").html('<li>D. ' + questions[qID].Option4 + '</li>');
+            $("#correctAnswer").val(questions[qID].AnswerId);
+        }
+
     }
 
 </script>
+
+<script type="text/javascript">
+    var messages = [];
+
+    $(function () {
+        $("#message").hide();
+
+        function PollData() {
+            $.ajax({
+                url: "http://localhost:4477/api/message",
+                type: "get",
+                success: function (data) {
+                    $.each(data, function (index, value) {
+                        var messageId = value.MessageId;
+
+                        if (jQuery.inArray(messageId, messages) == -1) {
+                            $("#message").show().html(value.Text);
+                            messages.push(value.MessageId);
+                            setTimeout(function () {
+                                $("#message").hide();
+                            }, 2000);
+                        }
+                    })
+                }
+            });
+        }
+
+        setInterval(function () { PollData(); }, 500);
+    });
+</script>
 <input type="hidden" id="correctAnswer" />
-<div class="view-surface">
+<input hidden="hidden" id="curQuestion" />
+
+
+<div class="view-surface" id="inGame">
+    <div id="message"></div>
+
     <div style="text-align: center;">
         <img src="images/venuepop-mini-header.png" />
     </div>
@@ -36,14 +79,14 @@
     <table style="width: 400px;" align="center">
         <tr>
             <td>
-                <div class="gameHeaderItem">Player 1</div>
+                <div class="gameHeaderItem">Denise Walker</div>
             </td>
             <td>
                 <div id="theTimer" style="font-family: Arial, Helvetica; width: 60px; height: 45px; font-size: 30pt; color: #ffff00; margin-left: auto; margin-right: auto; background-color: #000000; border: 4px solid #aaaaaa; padding: 8px; text-align: center; border-radius: 10px;">:15</div>
 
             </td>
             <td>
-                <div class="gameHeaderItem">Score: 0</div>
+                <div class="gameHeaderItem">Score: 300</div>
             </td>
         </tr>
     </table>

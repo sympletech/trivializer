@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@section scripts{
+    <script type="text/javascript" src="../../Scripts/jquery.signalR-0.5.2.js"></script>   
+    <script src="/signalr/hubs" type="text/javascript"></script>
+      <script type="text/javascript">
+          $(function () {
+              var chat = $.connection.chat;
+              chat.addMessage = function (message) {
+                  $('#messages').append('<li>' + message + '</li>');
+              };
+
+              $("#broadcast").click(function () {
+                  chat.send($('#msg').val());
+              });
+
+              // Start the connection
+              $.connection.hub.start();
+          });
+  </script>
+}
+
+<p>
+    <h1>Notification:</h1>
+    </p>
+<textarea id="msg" cols="40" rows="10"></textarea><Br />
+<input type="button" id="broadcast" value="Broadcast to Games" />
+
+  <ul id="messages">
+  </ul>

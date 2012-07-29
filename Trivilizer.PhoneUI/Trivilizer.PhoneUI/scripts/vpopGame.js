@@ -72,10 +72,12 @@ $("#nextButton").click(function () {
 });
 
 function AnswerClicked(answerClicked) {
-    var correctAnswer = $("#correctAnswer").val();
+    var correctAnswer = parseInt($("#correctAnswer").val());
+    console.log({ a: answerClicked, b: correctAnswer });
     if (answerClicked == correctAnswer) {
         $('#answer' + answerClicked.toString()).addClass("correctAnswer");
-        $('#nextButtonContainer').fadeIn('fast');
+        $('#inGame #nextButtonContainer').fadeIn('fast');
+        
         popSound.play();
         $("#theTimer").html(":00");
     } else {

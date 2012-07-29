@@ -1,0 +1,11 @@
+C:\code\VenuePop2\VenuePop\DAL\bin\Debug\DAL.dll.config
+C:\code\VenuePop2\VenuePop\DAL\bin\Debug\DAL.dll
+C:\code\VenuePop2\VenuePop\DAL\bin\Debug\DAL.pdb
+C:\code\VenuePop2\VenuePop\DAL\bin\Debug\CorrugatedIron.dll
+C:\code\VenuePop2\VenuePop\DAL\bin\Debug\Newtonsoft.Json.dll
+C:\code\VenuePop2\VenuePop\DAL\bin\Debug\protobuf-net.dll
+C:\code\VenuePop2\VenuePop\DAL\bin\Debug\Newtonsoft.Json.pdb
+C:\code\VenuePop2\VenuePop\DAL\bin\Debug\Newtonsoft.Json.xml
+C:\code\VenuePop2\VenuePop\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\code\VenuePop2\VenuePop\DAL\obj\Debug\DAL.dll
+C:\code\VenuePop2\VenuePop\DAL\obj\Debug\DAL.pdb

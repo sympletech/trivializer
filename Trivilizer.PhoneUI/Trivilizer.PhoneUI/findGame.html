@@ -1,52 +1,42 @@
 ﻿<script type="text/javascript">
     $(function () {
-        $(".game-link a").live("click", function (e) {
+        $(".availGameEntry").live("click", function (e) {
             e.preventDefault();
-            var id = $(this).attr("id");
-            
+            var id = $(this).attr("data-game-id");
+            window.location.href = "#tabstrip-ingame";
+            startCountDown(15, 1000, myFunction);
             //Pull down Game Questions -- and replace the ingame tab
-            $.get("#tabstrip-ingame, #friends-games", function (data) {
+            //$.get("#tabstrip-ingame, #friends-games", function (data) {
 
-            });
+            //});
         });
 
         GetNearbyGames();
+
+
     });
-    
+
     function GetNearbyGames() {
         var game = {
             Id: 1,
-            Name: 'Test Game',
-            Description: 'This is a test game'
+            Name: 'AT&T Hackathon IO/LA',
+            Category: 'General trivia'
         };
 
         var games = [];
-
-        for (var i = 0; i < 3; i++) {
-            games.push(game);
-        }
+        games.push(game);
 
         for (var i in games) {
-            $('#nearby-games').append("<li data-icon='toprated'>" +
-                "<a class='game-link' data-game-id='" + games[i].Id + "' href='#tabstrip-ingame'>" +
-                "<div class='game-name'>" + games[i].Name + "</div>" +
-                "<div class=''>" + games[i].Description + "</div>" +
-                "</a></li>");
+            $('#avialGames-wrapper').append("<div class='availGameEntry' data-game-id='" + games[i].Id + "'>" + games[i].Name + "<br /><span class='cat'>Category:" + games[i].Category + "</span></div>");
         }
     }
 </script>
 
 <div class="view-surface">
-    <!-- ********************* Find Game Screen ***********************  -->
-    <div class="widget">
-        <ul>
-            <li>Avialable Games
-                <ul id="nearby-games"></ul>
-            </li>
-            <li>Friends Currently Playing
-                <ul id="friends-games">
-                </ul>
-            </li>
-        </ul>
+    <div style="text-align: center;">
+        <img src="images/venuepop-mini-header.png" />
     </div>
+
+    <div id="availGames">Available Games</div>
+    <div id="avialGames-wrapper"></div>
 </div>

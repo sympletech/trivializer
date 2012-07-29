@@ -63,6 +63,7 @@
     <Content Include="config.xml" />
     <Content Include="currentStandings.html" />
     <Content Include="FindGame.html" />
+    <Content Include="images\1ee08019a3f574bf5e19b8931b06849b.png" />
     <Content Include="images\burst.jpg" />
     <Content Include="images\darkburst.jpg" />
     <Content Include="images\facebook_logo.png" />
@@ -73,6 +74,7 @@
     <Content Include="images\logo.png" />
     <Content Include="images\newgame-click.png" />
     <Content Include="images\newgame-up.png" />
+    <Content Include="images\qrcode.png" />
     <Content Include="images\venuepop-headerlogo.png" />
     <Content Include="images\venuepop-mini-header.png" />
     <Content Include="index.html" />
@@ -1684,6 +1686,7 @@
     <Content Include="scripts\Kendo UI Mobile Q2 2012\styles\kendo.mobile.blackberry.min.css" />
     <Content Include="scripts\Kendo UI Mobile Q2 2012\styles\kendo.mobile.ios.min.css" />
     <Content Include="scripts\Kendo UI Mobile Q2 2012\styles\kendo.mobile.meego.min.css" />
+    <Content Include="scripts\questions.js" />
     <Content Include="styles\VenuePopMain.css" />
     <Content Include="scripts\vpopGame.js" />
     <None Include="scripts\Kendo UI Mobile Q2 2012\vsdoc\kendo.mobile-vsdoc.js" />

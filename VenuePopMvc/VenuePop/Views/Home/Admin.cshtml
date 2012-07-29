@@ -1,0 +1,30 @@
+﻿@model VenuePop.Models.Message
+
+@{
+    ViewBag.Title = "Admin";
+}
+
+<h2>Venue Pop</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Notifiation</legend>
+
+
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Text, 4, 40, new { })
+            @Html.ValidationMessageFor(model => model.Text)
+        </div>
+
+        <p>
+            <input type="submit" value="Send to Games!" />
+        </p>
+    </fieldset>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

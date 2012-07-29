@@ -1,16 +1,37 @@
-﻿ <div class="view-surface">
-     <div style="float: left; height: 350px; padding: 50px;">
-         <img src="images/facebook_logo.png" />
+﻿<script type="text/javascript">
+    $(function() {
+        $('#qrcode').click(function() {
+            $("#userInfo").fadeIn('fast').delay(500);
+            showNext();
+        });
+
+        $("#nextButton").click(function () {
+            window.location.href = '#tabstrip-findGames';
+        });
+    });
+
+    function showNext() {
+        $('#nextButtonContainer').delay(500).fadeIn('fast');
+    }
+</script> 
+
+<div class="view-surface">
+     <div style="text-align: center;">
+         <img src="images/venuepop-mini-header.png" />
      </div>
-     <div style="padding: 50px;">
-         <label>User Name</label>
-         <input type="text" name="username"/><br/>
-         
-         <label>Password</label>
-         <input type="password" name="password"/><br/>
-         
-         <div style="text-align: center">
-             <img id="login" class="img-btn" data-link="#tabstrip-findGames" src="images/login-up.png" onmousedown="this.src='images/login-click.png'; popSound.play();" onmouseup="this.src='images/login-up.png'" />
-         </div>
+     <div style="text-align: center;">
+         <img id="qrcode" src="images/qrcode.png" />
      </div>
+     
+    <div class="largespacer"></div>
+    <div id="userInfo" style="display: none; text-align: center; height: 100px; width: 350px; background-color: #ffffff; color: #000000; font-size: 24pt; font-weight: bold; border-radius: 10px; margin-left: auto; margin-right: auto; border: 5px solid #000000; font-family: Arial, Helvetica;">
+        <img src="images/1ee08019a3f574bf5e19b8931b06849b.png" style="float: left;" />
+        <span style="color: #00aa00">Confirmed:</span>
+        Denise Walker
+    </div>
+    <div class="largespacer"></div>
+    <div id="nextButtonContainer" style="padding-top: 15px; display: none;">
+        <div id="nextButton" class="bluebutton">Next</div>
+    </div>
+
  </div>
