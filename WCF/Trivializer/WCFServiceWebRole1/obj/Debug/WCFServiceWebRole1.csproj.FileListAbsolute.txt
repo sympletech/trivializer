@@ -1,0 +1,8 @@
+C:\Users\Richard D Ciampa\Documents\Visual Studio 2010\Team Foundation Server\Projects\Trivializer\WCFServiceWebRole1\bin\WCFServiceWebRole1.dll
+C:\Users\Richard D Ciampa\Documents\Visual Studio 2010\Team Foundation Server\Projects\Trivializer\WCFServiceWebRole1\bin\WCFServiceWebRole1.pdb
+C:\Users\Richard D Ciampa\Documents\Visual Studio 2010\Team Foundation Server\Projects\Trivializer\WCFServiceWebRole1\bin\Microsoft.WindowsAzure.Diagnostics.dll
+C:\Users\Richard D Ciampa\Documents\Visual Studio 2010\Team Foundation Server\Projects\Trivializer\WCFServiceWebRole1\bin\Microsoft.WindowsAzure.StorageClient.dll
+C:\Users\Richard D Ciampa\Documents\Visual Studio 2010\Team Foundation Server\Projects\Trivializer\WCFServiceWebRole1\bin\Microsoft.WindowsAzure.Diagnostics.xml
+C:\Users\Richard D Ciampa\Documents\Visual Studio 2010\Team Foundation Server\Projects\Trivializer\WCFServiceWebRole1\bin\Microsoft.WindowsAzure.StorageClient.xml
+C:\Users\Richard D Ciampa\Documents\Visual Studio 2010\Team Foundation Server\Projects\Trivializer\WCFServiceWebRole1\obj\Debug\WCFServiceWebRole1.dll
+C:\Users\Richard D Ciampa\Documents\Visual Studio 2010\Team Foundation Server\Projects\Trivializer\WCFServiceWebRole1\obj\Debug\WCFServiceWebRole1.pdb
