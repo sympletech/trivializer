@@ -1,13 +1,28 @@
-﻿<div class="question-wrapper">
-    <div class="question-number">3</div>
-    <div class="question">
-        Why did the chicken cross the road?
-    </div>
+﻿<script type="text/javascript">
+    $(function () {
+        var game_id = ReadQueryString('gameId');
+        var question = {
+            QuestionId: 3,
+            Question: 'Why did the chicken cross the road?',
+            AnswerId: 4,
+            Option1: 'To Find His Car',
+            Option2: 'To Help a kid',
+            Option3: 'To Rob A Bank',
+            Option4: 'To Get To The Other Side'
+        };
+        
+        $(".question-wrapper .question-number").html(question.QuestionId);
+        $(".question-wrapper .question").html(question.Question);
+        $(".answers").append('<li>A. ' + question.Option1 + '</li>');
+        $(".answers").append('<li>B. ' + question.Option2 + '</li>');
+        $(".answers").append('<li>C. ' + question.Option3 + '</li>');
+        $(".answers").append('<li>D. ' + question.Option4 + '</li>');
+    });
+</script>
+
+<div class="question-wrapper">
+    <div class="question-number"></div>
+    <div class="question"></div>
 </div>
 
-<ul class="answers">
-    <li>A. To Find His Car</li>
-    <li>B. To Help a kid</li>
-    <li>C. To Rob A Bank</li>
-    <li>D. To Get To The Other Side</li>
-</ul>
+<ul class="answers"></ul>
