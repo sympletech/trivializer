@@ -1,0 +1,5 @@
+c:\users\owner\documents\visual studio 2010\Projects\VenuePop\VenuePop\bin\VenuePop.dll
+c:\users\owner\documents\visual studio 2010\Projects\VenuePop\VenuePop\bin\VenuePop.pdb
+c:\users\owner\documents\visual studio 2010\Projects\VenuePop\VenuePop\obj\Debug\ResolveAssemblyReference.cache
+c:\users\owner\documents\visual studio 2010\Projects\VenuePop\VenuePop\obj\Debug\VenuePop.dll
+c:\users\owner\documents\visual studio 2010\Projects\VenuePop\VenuePop\obj\Debug\VenuePop.pdb

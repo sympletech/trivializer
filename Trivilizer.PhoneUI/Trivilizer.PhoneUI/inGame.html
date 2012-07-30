@@ -14,6 +14,10 @@
             console.log(qID);
             LoadNextQuestion(qID);
         });
+
+        //$("#displayAnnouncement").click(function () {
+        //    displayAnnouncement('yo');
+        //});
     });
 
     function LoadNextQuestion(qID) {
@@ -34,6 +38,11 @@
 
     }
 
+    function displayAnnouncement(message) {
+        $("#AnnouncementText").html(message);
+        $('#displayAnnouncement').slideDown('fast').delay(6000).slideUp('fast');
+    }
+
 </script>
 
 <script type="text/javascript">
@@ -43,30 +52,41 @@
         $("#message").hide();
 
         function PollData() {
-            $.ajax({
-                url: "http://localhost:4477/api/message",
-                type: "get",
-                success: function (data) {
-                    $.each(data, function (index, value) {
-                        var messageId = value.MessageId;
+            
 
-                        if (jQuery.inArray(messageId, messages) == -1) {
-                            $("#message").show().html(value.Text);
-                            messages.push(value.MessageId);
-                            setTimeout(function () {
-                                $("#message").hide();
-                            }, 2000);
-                        }
-                    })
-                }
+            $.get('http://localhost:4477/home/GetMessage', function (data) {
+                $("#message").show().html(data);
             });
+
+            //$.ajax({
+            //    url: "http://localhost:4477/home/GetMessage",
+            //    type: "get",
+            //    success: function (data) {
+            //        $.each(data, function (index, value) {
+            //            var messageId = value.MessageId;
+
+            //            if (jQuery.inArray(messageId, messages) == -1) {
+            //                $("#message").show().html(value.Text);
+            //                messages.push(value.MessageId);
+            //                setTimeout(function () {
+            //                    $("#message").hide();
+            //                }, 2000);
+            //            }
+            //        })
+            //    }
+            //});
         }
 
         setInterval(function () { PollData(); }, 500);
     });
 </script>
+
 <input type="hidden" id="correctAnswer" />
 <input hidden="hidden" id="curQuestion" />
+
+<div id="displayAnnouncement">
+    <span>Announcement:</span> <span id="AnnounceText">$1 shots for the next 1/2 hour.</span>
+</div>
 
 
 <div class="view-surface" id="inGame">
@@ -106,4 +126,7 @@
     <div id="nextButtonContainer" style="padding-top: 15px; display: none;">
         <div id="nextButton" class="bluebutton">Next</div>
     </div>
+    
+    <div id="fake" style="height: 10px; border: solid 10px #3f3f3f; background: #3f3f3f;" onclick="alert('yo'); displayAnnouncement('$1 shots for the next 1/2 hour.')"></div>
+    
 </div>

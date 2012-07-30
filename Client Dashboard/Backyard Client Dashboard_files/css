@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Ruda';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ruda'), url(https://themes.googleusercontent.com/static/fonts/ruda/v4/XOnvFWI36RNlu_0zaCpNkw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Asap';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Asap'), local('Asap-Regular'), url(https://themes.googleusercontent.com/static/fonts/asap/v1/SgBaq0dzhSGNMfqm2JX5ng.woff) format('woff');
+}
+@font-face {
+  font-family: 'Ruda';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Ruda Black'), local('Ruda-Black'), url(https://themes.googleusercontent.com/static/fonts/ruda/v4/62f-GUHoRIA5Xaf0fgZolw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Asap';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Asap Bold'), local('Asap-Bold'), url(https://themes.googleusercontent.com/static/fonts/asap/v1/yVILXKVgPzaz72DegpV7Bg.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Ruda';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Ruda Bold'), local('Ruda-Bold'), url(https://themes.googleusercontent.com/static/fonts/ruda/v4/NqfDiXLAov4H5k-m4LIQuQ.woff) format('woff');
+}

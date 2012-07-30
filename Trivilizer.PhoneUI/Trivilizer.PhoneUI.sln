@@ -7,6 +7,26 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VenuePop", "..\VenuePopMvc\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "..\VenuePopMvc\DAL\DAL.csproj", "{4D8CF58D-26C7-4863-8DC1-631CC82F0C12}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Client Dashboard", "..\Client Dashboard\", "{9AC1F7A7-125E-4B6B-8508-5BF143F4798E}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.PhysicalPath = "..\Client Dashboard\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Client Dashboard\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.VirtualPath = "/Client Dashboard"
+		Release.AspNetCompiler.Debug = "False"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.PhysicalPath = "..\Client Dashboard\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Client Dashboard\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.VirtualPath = "/Client Dashboard"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		VWDPort = "3190"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,13 +38,15 @@ Global
 		{43CB8D8E-4EDF-4220-86C4-7332D0E52206}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43CB8D8E-4EDF-4220-86C4-7332D0E52206}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4D8CF58D-26C7-4863-8DC1-631CC82F0C12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4D8CF58D-26C7-4863-8DC1-631CC82F0C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D8CF58D-26C7-4863-8DC1-631CC82F0C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D8CF58D-26C7-4863-8DC1-631CC82F0C12}.Release|Any CPU.Build.0 = Release|Any CPU
 		{58550491-AD8D-4E8D-B612-5353CC84FBD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{58550491-AD8D-4E8D-B612-5353CC84FBD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58550491-AD8D-4E8D-B612-5353CC84FBD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58550491-AD8D-4E8D-B612-5353CC84FBD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AC1F7A7-125E-4B6B-8508-5BF143F4798E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AC1F7A7-125E-4B6B-8508-5BF143F4798E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AC1F7A7-125E-4B6B-8508-5BF143F4798E}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AC1F7A7-125E-4B6B-8508-5BF143F4798E}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

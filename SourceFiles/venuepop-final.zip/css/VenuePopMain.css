@@ -1,0 +1,154 @@
+﻿body {
+    background-color: #000000;
+    background-image: url("../images/darkburst.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    margin: 0px;
+}
+
+.spacer {
+    padding-top: 5px;    
+}
+
+.largespacer {
+    padding-top: 15px;    
+}
+.bluebutton {
+    background: rgb(30,87,153); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlNTc5OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzI5ODlkOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iIzIwN2NjYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3ZGI5ZTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(51%,rgba(32,124,202,1)), color-stop(100%,rgba(125,185,232,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-8 */
+    color: #ffffff;
+    font-size: 16pt;
+    font-weight: bold;
+    width: 100px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    border: 4px solid #ffffff;
+    -webkit-box-shadow: 0 0 2px 2px #000000;
+}
+
+.gameHeaderItem {
+ background: rgb(125,126,125); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdkN2U3ZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZTBlMGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,126,125,1)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C */
+border-radius:8px; 
+text-align:center; 
+width:150px; 
+font-weight:bold; 
+margin-left:auto; 
+margin-right:auto; 
+border:5px solid #ffffaa; 
+padding:6px; 
+font-size:14pt; 
+font-family:Arial, Helvetica;  
+color:#ffffff   
+}
+
+.answers {
+    font-family:Arial, Helvetica; 
+    font-size:14pt; 
+    color:#ffffff; 
+    width:300px; 
+    padding:8px; 
+    border:5px solid #dddddd; 
+    border-radius:8px; 
+    background-color:#000000; 
+    margin-left:auto; 
+    margin-right:auto;
+    cursor: pointer;
+}
+
+.correctAnswer {
+        background-color: #00aa00; 
+}
+
+.wrongAnswer {
+    background-color: #aa0000;
+}
+
+.almostDone {
+    color: #ff0000;
+}
+
+.timerStyle { 
+   font-family: Arial, Helvetica; 
+   width:60px; 
+   height:45px; 
+   font-size:30pt; 
+   color:#ffff00; 
+   margin-left:auto; 
+   margin-right:auto; 
+   background-color:#000000; 
+   border:4px solid #aaaaaa; 
+   padding:8px; 
+   text-align:center; 
+   border-radius:10px;
+}
+
+#availGames {
+    color: #ffffff;
+    background-color: #000000;
+    width: 450px;
+    font-size: 18pt;
+    padding: 8px;
+    font-family:Arial, Helvetica;
+    text-align: center;
+    border-radius: 5px 5px 0px 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.availGameEntry {
+    width: 450px;
+    font-size: 16pt;
+    font-family: Arial, Helvetica;
+    color: #000000;
+    padding: 8px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #aaaaaa;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.availGameEntry:hover {
+    background-color: #efefef;
+}
+
+#AnnounceText {
+    color: #ffff00;
+}
+
+#displayAnnouncement {
+        position:fixed; 
+    bottom:0px; 
+    width:100%; 
+    display:none; 
+    background-color:#000000; 
+    color:#ffffff; 
+    padding:8px; 
+    text-align:center; 
+    display:none; 
+    font-family:Arial, Helvetica; 
+    font-size:16pt; 
+    border-top:2px solid #aa0000; 
+    padding-top:10px;
+
+}
